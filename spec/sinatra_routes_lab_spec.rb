@@ -1,17 +1,18 @@
+# frozen_string_literal: true
 
 require 'pry'
-describe "Basic Routes Lab" do
+describe 'Basic Routes Lab' do
   describe "GET '/name'" do
     before(:each) do
       get '/name'
     end
 
-    it "returns a 200 status code" do
+    it 'returns a 200 status code' do
       expect(last_response.status).to eq(200)
     end
 
-    it "displays your name" do
-      expect(last_response.body).to include("My name is ")
+    it 'displays your name' do
+      expect(last_response.body).to include('My name is ')
     end
   end
 
@@ -20,14 +21,13 @@ describe "Basic Routes Lab" do
       get '/hometown'
     end
 
-    it "returns a 200 status code" do
+    it 'returns a 200 status code' do
       expect(last_response.status).to eq(200)
     end
 
-    it "displays your hometown" do
-      expect(last_response.body).to include("My hometown is ")
+    it 'displays your hometown' do
+      expect(last_response.body).to include('My hometown is ')
     end
-
   end
 
   describe "GET '/favorite-song'" do
@@ -35,14 +35,12 @@ describe "Basic Routes Lab" do
       get '/favorite-song'
     end
 
-    it "returns a 200 status code" do
+    it 'returns a 200 status code' do
       expect(last_response.status).to eq(200)
     end
 
-    it "displays your favorite song" do
-      expect(last_response.body).to include("My favorite song is ")
+    it 'displays your favorite song' do
+      expect(last_response.body).to include('My favorite song is ')
     end
-
-  
   end
 end
